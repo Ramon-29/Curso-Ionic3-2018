@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Fruits list
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <fruit-card *ngFor="let fruit of fruits"
+              [fruit]="fruit"
+              (deletePressed)="deleteFruit(fruit)"></fruit-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar text-center>
+    <button ion-button color="secondary" [disabled]="!isRestoreAllowed" (click)="restoreFruits()">
+      Restore
+    </button>
+  </ion-toolbar>
+</ion-footer>

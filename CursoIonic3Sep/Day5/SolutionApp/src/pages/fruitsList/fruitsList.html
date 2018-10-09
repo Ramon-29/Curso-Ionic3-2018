@@ -1,0 +1,15 @@
+<ion-header>
+  <common-navbar title="Fruits list"></common-navbar>
+</ion-header>
+
+<ion-content>
+  <div text-center padding [hidden]="!isLoading">
+    <ion-spinner></ion-spinner>
+  </div>
+  <ion-list>
+    <ion-item *ngFor="let fruit of fruits" (click)="showDetails(fruit)">
+      <p><b>{{ fruit.name }}</b></p>
+      <p>{{ fruit.description | cutString: 40 }}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

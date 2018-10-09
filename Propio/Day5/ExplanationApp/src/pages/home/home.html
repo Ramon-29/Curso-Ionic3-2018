@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Formulario</h1>
+  <form [formGroup]="form" (submit)="formSubmitted()">
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input type="text" formControlName="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Birthday</ion-label>
+      <ion-datetime formControlName="birthDate"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Sex</ion-label>
+      <ion-select formControlName="sex">
+        <ion-option value="male">Male</ion-option>
+        <ion-option value="female">Female</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Phone</ion-label>
+      <ion-input type="tel" formControlName="phone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input type="email" formControlName="email"></ion-input>
+    </ion-item>
+
+    <div margin-top text-end>
+        <button ion-button [disabled]="(form.invalid)">Submit</button>
+    </div>
+  </form>
+
+  <!--
+  <h1>Summary</h1>
+  <ion-item>
+    <ion-label>Name</ion-label>
+    <ion-label type="text" >{{ submittedValues.name }}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Birthday</ion-label>
+    <ion-label >{{ submittedValues.birthDate | date:'dd-MM-yyyy' }}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Sex</ion-label>
+    <ion-label type="text">{{submittedValues.sex}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Phone</ion-label>
+    <ion-label type="text">{{submittedValues.phone}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Email</ion-label>
+    <ion-label type="text">{{submittedValues.email}}</ion-label>
+  </ion-item>
+-->
+</ion-content>

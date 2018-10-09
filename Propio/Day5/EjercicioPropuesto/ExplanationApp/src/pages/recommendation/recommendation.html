@@ -1,0 +1,35 @@
+<ion-header>
+        <ion-navbar>
+          <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+          <ion-title>
+            <span>
+              {{ 'recommendation.Title' | translate}}
+            </span>
+          </ion-title>
+        </ion-navbar>
+      </ion-header>
+      
+      <ion-content>
+        <div text-center padding *ngIf="isLoading">
+          <ion-spinner></ion-spinner>
+        </div>
+        <ion-list [hidden]="isError">
+          <button ion-item *ngFor="let recommendation of recommendations" (click)="itemTapped($event, recommendation)">
+            <div>
+              {{recommendation.title}}
+              <p>{{recommendation.content | lettersToCut: 50}}</p>
+            </div>
+          </button>
+        </ion-list>
+        <div [hidden]="!isError">
+            <p>Error</p>
+            <button ion-button secondary (click)="retryLoad()">
+              <span>{{ 'common.Retry' | translate }}</span>
+            </button>
+        </div>
+        <div *ngIf="selectedRecommendation" padding>
+          You navigated here from <b>{{selectedRecommendation.title}}</b>
+        </div>
+      </ion-content>

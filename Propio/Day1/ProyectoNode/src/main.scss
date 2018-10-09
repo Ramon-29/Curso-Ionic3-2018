@@ -1,0 +1,84 @@
+.box{
+  margin: auto;
+  width: 500px;
+  width: 504px;
+
+  #header{
+    white-space: nowrap;
+    height: 50px;
+    width: 504px;
+
+    #simbol{
+      float: left;
+      margin-right:10px;
+      text-align: center;
+      font-weight: bold;
+      width: 50px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      background-color: white;
+      margin: 0px;
+    }
+  
+    #title{
+      display: inline;
+      float: right;
+      background-color: lightblue;
+      text-transform: uppercase;
+      text-align: center;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      width: 450px;
+      margin: 0px;
+    }
+  }
+
+  #content-list{
+    float: left;
+    width: 504px;
+    height: 600px;
+    background-color: pink;
+
+    ul {
+      margin-left: 50px;
+      margin-top: 30px;
+      width: 400px;
+      height: 400px;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      overflow: scroll;
+      padding: 0;
+      border: 2px solid ;
+      font-size: 16px;
+      -webkit-overflow-scrolling: touch;
+      background-color: white;
+      li {
+        padding: 10px 20px;      
+        border-bottom: 1px solid #ccc;
+        text-align: center;
+      }
+    }
+
+    .button{
+      display: inline-block;
+      font-size: 16px;
+      padding: 20px;
+      margin-top: 30px;
+
+      &#deleteItemButton{
+        margin-left: 50px;
+        float: left;
+      }
+
+      &#addItemButton{
+        margin-right: 50px;
+        float: right;
+      }
+    }
+  }
+}
+
+
+
+

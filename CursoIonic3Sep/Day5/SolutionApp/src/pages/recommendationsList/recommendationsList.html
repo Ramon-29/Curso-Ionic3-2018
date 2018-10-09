@@ -1,0 +1,15 @@
+<ion-header>
+  <common-navbar title="Recommendations list"></common-navbar>
+</ion-header>
+
+<ion-content>
+  <div text-center padding [hidden]="!isLoading">
+    <ion-spinner></ion-spinner>
+  </div>
+  <ion-list>
+    <ion-item *ngFor="let rec of recommendations" (click)="showDetails(rec)">
+      <p><b>{{ rec.title }}</b></p>
+      <p>{{ rec.content | cutString: 50 }}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

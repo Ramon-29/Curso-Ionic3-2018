@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>
+      <span>
+        {{ 'detailFruit.Title' | translate }}
+      </span>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1>{{ fruit.name }}</h1>
+  <img class="image" src="assets/imgs/fruits/{{ fruit.image }}">
+  <form [formGroup]="form" (submit)="formFruitDetailSubmitted()">
+    <ion-item>
+      <textarea rows="4" cols="50" formControlName="description"></textarea>
+    </ion-item>
+    <div padding>
+      <div text-center padding *ngIf="isLoading">
+        <ion-spinner></ion-spinner>
+      </div>
+      <div margin-top *ngIf="!isLoading">
+        <button ion-button>Actualizar</button>
+      </div>
+    </div>
+  </form>
+  <a target="_blank" [href]="fruit.link">More info</a>
+  <div padding>
+    <rating (voteDone)="presentToast($event, fruit)"></rating>
+  </div>
+</ion-content>

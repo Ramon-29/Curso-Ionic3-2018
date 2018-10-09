@@ -1,0 +1,19 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title><span>
+        {{ 'detailrecommendation.Title' | translate}}
+      </span></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1>{{ recommendation.title }}</h1>
+  <p>{{ recommendation.content }}</p>
+  <p><i>{{ recommendation.author}}</i></p>
+  <div padding>
+    <rating></rating>
+  </div>
+</ion-content>

@@ -1,0 +1,11 @@
+{
+    "common":{
+        "yes": "si",
+        "no": "no"
+    },
+    "home":{
+        "title": "Titulo",
+        "hello": "Hola Mundo!",
+        "helloName": "Hola {{ name }}, como estas?"
+    }
+}

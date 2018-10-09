@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ exampleItem.title }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>{{ exampleItem.title }}</h1>
+  <ion-icon class="large-icon" [name]="exampleItem.icon"></ion-icon>
+  <p>{{ exampleItem.note }}</p>
+  <p>Price: {{ exampleItem.euroPrice | currencyFormat: this.currency }}</p>
+</ion-content>

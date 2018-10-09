@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Fruits List
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h1>Fruits</h1>
+  <expandable *ngFor="let fruit of fruits" [title]="fruit.name">
+    <fruit-card [fruit]="fruit"
+    (deletePressed)="deleteFruit(fruit)"></fruit-card>
+  </expandable>
+  
+  
+  <h1>Recommendation</h1>
+  <expandable *ngFor="let recommendation of recommendations" [title]="recommendation.title">
+    <recommendation-card [recommendation]="recommendation"
+    (deletePressed)="deleteRecommendation(recommendation)"></recommendation-card>
+  </expandable>
+
+</ion-content>

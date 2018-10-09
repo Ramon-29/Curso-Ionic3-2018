@@ -1,0 +1,9 @@
+{
+  "usingPipe": "Using the translate pipe",
+  "usingDirective": "Using the translate directive",
+  "usingInstant": "Using the instant method to translate in the controller",
+  "usingComponent": "Using a custom translate component",
+  "parametrized": "Hello {{ name }}",
+  "fruitsList": "Fruits list",
+  "fruitsListError": "Error loading fruits list"
+}

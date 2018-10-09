@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>detail-fruit</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1>{{ fruit.name }}</h1>
+  <img class="image" src="assets/imgs/fruits/{{ fruit.image }}">
+  <p>{{ fruit.description }}</p>
+  <a target="_blank" [href]="fruit.link">More info</a>
+  <div padding>
+    <rating></rating>
+  </div>
+</ion-content>

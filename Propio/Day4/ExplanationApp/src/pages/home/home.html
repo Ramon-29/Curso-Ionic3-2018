@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ 'home.title' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Day 4 </h3>
+
+  <p>{{ 'home.hello' | translate }}</p>
+  <p translate>home.hello</p>
+
+  <button ion-button>
+    <span translate>
+      home.hello
+    </span>
+  </button>
+
+  <!--<p>{{ 'home.helloName' | translate: (name: 'Paco') }}</p>-->
+  <p translate [translateParams]="{name: 'Paco'}">home.helloName</p>
+  <p>
+    home.hello contains = {{ str }}
+  </p>
+
+  <button ion-button secondary menuToggle>Toggle Menu</button>
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-header>
+        <ion-navbar>
+          <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+          <ion-title>List</ion-title>
+        </ion-navbar>
+      </ion-header>
+      
+      <ion-content>
+        <div text-center padding *ngIf="isLoading">
+          <ion-spinner></ion-spinner>
+        </div>
+        <ion-list>
+          <button ion-item *ngFor="let recommendation of recommendations" (click)="itemTapped($event, recommendation)">
+            <div>
+              {{recommendation.title}}
+              <p>{{recommendation.content | lettersToCut: 50}}</p>
+            </div>
+          </button>
+        </ion-list>
+        <div *ngIf="selectedRecommendation" padding>
+          You navigated here from <b>{{selectedRecommendation.title}}</b>
+        </div>
+      </ion-content>

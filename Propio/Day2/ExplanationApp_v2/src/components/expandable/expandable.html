@@ -1,0 +1,11 @@
+<ion-card>
+    <ion-card-header class="card-header">
+        <button ion-button (click)="toggleExpand()">
+            {{ this.isExpanded ? '-' : '+' }}
+        </button>
+        <div class="card-title">{{title}}</div>
+    </ion-card-header>
+    <ion-card-content #cc >
+        <ng-content></ng-content>
+    </ion-card-content>
+</ion-card>

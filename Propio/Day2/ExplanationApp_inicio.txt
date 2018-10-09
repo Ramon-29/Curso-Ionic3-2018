@@ -1,0 +1,53 @@
+
+interface Car{
+  make: string;
+  model: string;
+  year: number;
+}
+
+//Clase
+
+
+public title: string;
+
+  constructor() {
+    let s1: string;
+    s1 = `Hello World`;
+
+    let n1: number;
+    n1 = 1;
+
+    let b1: boolean;
+    b1 = false;
+
+    //const s = this.sayHello('Paco');
+    //console.log(s);
+
+    let a1: number[];
+    a1 = [1, 2];
+    let a2: string[];
+    a2 = ['Hola','Adios'];
+    let x: string|number;
+    x = 1;
+
+    let car: Car;
+    car = {
+      make: 'VW',
+      model: 'eos',
+      year: 2008
+    };
+
+    enum SemaphoreState{
+      Red,
+      Yellow,
+      Green
+    }
+
+    let semState: SemaphoreState.Red;
+
+  }
+
+
+  sayHello(name: string): string{
+    return (`Hello ${name}`);
+  }

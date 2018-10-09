@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Fruits List
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+  <fruit-card  *ngFor="let fruit of fruits" [fruit]="fruit"></fruit-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+      <button ion-button color="secondary" [disabled]="!isRestoreAllowed">
+         RESTORE
+      </button>
+  </ion-toolbar>
+</ion-footer>

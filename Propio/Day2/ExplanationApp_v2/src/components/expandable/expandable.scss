@@ -1,0 +1,17 @@
+expandable {
+
+    .card-header{
+        background-color: white;
+    }
+
+    .card-content{
+        padding: 0px 16px;
+        max-height: 0px;
+    }
+
+    .card-title{
+        display: inline-block;
+        font-weight: bold;
+    }
+
+}

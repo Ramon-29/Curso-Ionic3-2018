@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Webpack base project</title>
+    </head>
+    <body>
+        <script src="main.bundle.js"></script>
+        <script src="./loadData.js"></script>
+          
+        <div class="box">
+            <div id="header">
+                <span id="simbol">&lt</span>
+                <div  id="title">
+                    title
+                </div>
+            </div>
+            <div id="content-list">
+                <ul id="list">
+                </ul>
+                <div>
+                    <button class="button" id="deleteItemButton" onclick=removeItemList();> - </button>
+                </div>
+                <div>
+                    <button class="button" id="addItemButton" onclick=addItemList();> + </button>
+                </div>
+            </div>
+        </div>
+        <script>
+            let numeroItems = 15;
+            
+            for (let i = 1;i <= numeroItems; i++){
+                let ul= document.getElementById('list');
+                let li = document.createElement('li');
+                li.appendChild(document.createTextNode(`Item ${i}`));
+                ul.appendChild(li);
+            }
+
+            function addItemList(){
+                let ul= document.getElementById('list');
+                let li = document.createElement('li');
+                li.appendChild(document.createTextNode(`Item ${numeroItems + 1}`));
+                ul.appendChild(li);
+                numeroItems++;
+            }
+
+            function removeItemList(){
+                if(numeroItems!==0){
+                    let ul= document.getElementById('list');
+                    ul.removeChild(ul.lastChild);
+                    numeroItems--;
+                }
+                else{
+                    alert("No hay más elementos");
+                }
+            }
+        </script>  
+    </body>
+</html>

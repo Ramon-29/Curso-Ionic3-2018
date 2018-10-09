@@ -1,0 +1,170 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Fruits list
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3>
+          <img class="image" src="assets/imgs/fruits/{{ appleImage }}"/>
+        </ion-col>
+        <ion-col>
+          <h1>{{ appleName }}</h1>
+          <p class="description">{{ appleDescription }}</p>
+          <a target="_blank" href="{{ appleLink }}">More info</a>
+        </ion-col>
+        <ion-col col-2>
+          <button ion-button color="danger">
+            <ion-icon name="trash"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <ion-card padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3>
+          <img class="image" [src]="'assets/imgs/fruits/' + fruits[1].image"/>
+        </ion-col>
+        <ion-col>
+          <h1>{{ fruits[1].name }}</h1>
+          <p class="description">{{ fruits[1].description }}</p>
+          <a target="_blank" [href]="fruits[1].link">More info</a>
+        </ion-col>
+        <ion-col col-2>
+          <button ion-button color="danger">
+            <ion-icon name="trash"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <ion-card padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3>
+          <img class="image" src="assets/imgs/fruits/{{ fruits[2].image }}"/>
+        </ion-col>
+        <ion-col>
+          <h1>{{ fruits[2].name }}</h1>
+          <p class="description">{{ fruits[2].description }}</p>
+          <a target="_blank" [href]="fruits[2].link">More info</a>
+        </ion-col>
+        <ion-col col-2>
+          <button ion-button color="danger">
+            <ion-icon name="trash"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <ion-card padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3>
+          <img class="image" src="assets/imgs/fruits/{{ fruits[3].image }}"/>
+        </ion-col>
+        <ion-col>
+          <h1>{{ fruits[3].name }}</h1>
+          <p class="description">{{ fruits[3].description }}</p>
+          <a target="_blank" [href]="fruits[3].link">More info</a>
+        </ion-col>
+        <ion-col col-2>
+          <button ion-button color="danger">
+            <ion-icon name="trash"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <ion-card padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3>
+          <img class="image" src="assets/imgs/fruits/{{ fruits[4].image }}"/>
+        </ion-col>
+        <ion-col>
+          <h1>{{ fruits[4].name }}</h1>
+          <p class="description">{{ fruits[4].description }}</p>
+          <a target="_blank"  [href]="fruits[4].link">More info</a>
+        </ion-col>
+        <ion-col col-2>
+          <button ion-button color="danger">
+            <ion-icon name="trash"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <ion-card padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3>
+          <img class="image" src="assets/imgs/fruits/{{ fruits[5].image }}"/>
+        </ion-col>
+        <ion-col>
+          <h1>{{ fruits[5].name }}</h1>
+          <p class="description">{{ fruits[5].description }}</p>
+          <a target="_blank"  [href]="fruits[5].link">More info</a>
+        </ion-col>
+        <ion-col col-2>
+          <button ion-button color="danger">
+            <ion-icon name="trash"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <ion-card padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3>
+          <img class="image" src="assets/imgs/fruits/{{ fruits[6].image }}"/>
+        </ion-col>
+        <ion-col>
+          <h1>{{ fruits[6].name }}</h1>
+          <p class="description">{{ fruits[6].description }}</p>
+          <a target="_blank"  [href]="fruits[6].link">More info</a>
+        </ion-col>
+        <ion-col col-2>
+          <button ion-button color="danger">
+            <ion-icon name="trash"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <ion-card padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3>
+          <img class="image" src="assets/imgs/fruits/{{ fruits[7].image }}"/>
+        </ion-col>
+        <ion-col>
+          <h1>{{ fruits[7].name }}</h1>
+          <p class="description">{{ fruits[7].description }}</p>
+          <a target="_blank" [href]="fruits[7].link">More info</a>
+        </ion-col>
+        <ion-col col-2>
+          <button ion-button color="danger">
+            <ion-icon name="trash"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar text-center>
+    <button ion-button color="secondary" [disabled]="!isRestoreAllowed">
+      Restore
+    </button>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,17 @@
+<ion-header>
+  <common-navbar [title]="fruit.name"></common-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>{{ fruit.name }}</h1>
+  <img class="image" src="assets/imgs/fruits/{{ fruit.image }}">
+  <form [formGroup]="form" (submit)="submitForm()">
+    <ion-textarea formControlName="description"></ion-textarea>
+    <ion-spinner margin-bottom [hidden]="!isUpdating"></ion-spinner>
+    <button ion-button margin-bottom [hidden]="isUpdating">Update description</button>
+  </form>
+  <a target="_blank" [href]="fruit.link">More info</a>
+  <div padding>
+    <rating (voteSubmitted)="voteSubmitted($event)"></rating>
+  </div>
+</ion-content>

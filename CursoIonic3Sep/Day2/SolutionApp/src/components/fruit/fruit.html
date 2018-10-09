@@ -1,0 +1,17 @@
+<ion-grid>
+  <ion-row>
+    <ion-col col-4>
+      <img class="image" src="assets/imgs/fruits/{{ fruitObj.image }}">
+    </ion-col>
+    <ion-col>
+      <div>{{ fruitObj.description }}</div>
+      <a class="link" target="_blank" [href]="fruitObj.link">More info</a>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<rating></rating>
+<div text-end>
+  <button ion-button color="light"
+          (click)="triggerViewDetailsPressed()">View details</button>
+</div>
+

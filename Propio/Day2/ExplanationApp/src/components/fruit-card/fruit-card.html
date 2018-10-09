@@ -1,0 +1,21 @@
+<ion-card padding>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <img class="image" src="assets/imgs/fruits/{{fruit.image}}">
+            </ion-col>
+
+            <ion-col>
+                <h1>{{ fruit.name }}</h1>
+                <p margin-vertical>{{ fruit.description }}</p>
+                <a *ngIf="fruit.link" target="_blank" [href]="fruit.link">More info</a>
+            </ion-col>
+
+            <ion-col>
+                <button (click)="deleteFruit(fruit)" ion-button color="danger">
+                    <ion-icon name='trash'></ion-icon>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-card>

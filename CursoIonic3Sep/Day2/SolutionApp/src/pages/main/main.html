@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Day 1 - Exercise
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h1>Fruits</h1>
+  <expandable-content *ngFor="let fruit of fruits"
+                      [title]="fruit.name">
+    <fruit [fruitObj]="fruit"
+           (viewDetailsPressed)="viewFruitDetails(fruit)"></fruit>
+  </expandable-content>
+
+  <h1>Recommendations</h1>
+  <expandable-content *ngFor="let recommendation of recommendations"
+                      [title]="recommendation.title">
+    <recommendation [recommendationObj]="recommendation"
+                   (viewDetailsPressed)="viewRecommendationDetails(recommendation)"></recommendation>
+  </expandable-content>
+
+</ion-content>
+

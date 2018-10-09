@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Translate example
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <p>{{ 'usingPipe' | translate }}</p>
+
+  <p translate>usingDirective</p>
+
+  <p translate="usingDirective"></p>
+
+  <p>{{ translatedString }}</p>
+
+  <p><translate>usingComponent</translate></p>
+
+  <p>{{ 'notFound' | translate }}</p>
+
+  <p>{{ 'parametrized' | translate:{name: 'world'} }}</p>
+
+  <p translate [translateParams]="{name: 'world'}">parametrized</p>
+
+  <p translate="parametrized" [translateParams]="{name: 'world'}"></p>
+
+  <p>{{ paramTranslatedString }}</p>
+
+  <p><translate [params]="{name: 'world'}">parametrized</translate></p>
+
+</ion-content>

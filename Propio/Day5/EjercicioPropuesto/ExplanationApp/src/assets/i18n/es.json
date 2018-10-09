@@ -1,0 +1,27 @@
+{
+    "common":{
+        "yes": "si",
+        "no": "no",
+        "Retry": "Reintentar"
+    },
+    "home":{
+        "title": "Home",
+        "fruits": "Frutas",
+        "recommendations": "Recomendaciones",
+        "showMenu": "Mostrar Menú",
+        "showFruits": "Mostrar Frutas",
+        "showRecommendations": "Mostrar Recomendaciones"
+    },
+    "list":{
+        "Title": "Lista de Frutas"
+    },
+    "recommendation":{
+        "Title": "Lista de Recomendaciones"
+    },
+    "detailrecommendation":{
+        "Title": "Detalles de Recomendación"
+    },
+    "detailFruit":{
+        "Title": "Detalles de Fruta"
+    }
+}

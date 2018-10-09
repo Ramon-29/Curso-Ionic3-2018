@@ -1,0 +1,16 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{exampleItem.title | uppercase}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1>{{exampleItem.title}}</h1>
+  <ion-icon [name]="exampleItem.icon" item-start></ion-icon>
+  <p>{{exampleItem.euroPrice | currencyFormat: 'dollar'}}</p>
+</ion-content>
+
+

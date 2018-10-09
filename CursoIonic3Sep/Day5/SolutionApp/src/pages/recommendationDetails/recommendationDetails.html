@@ -1,0 +1,23 @@
+<ion-header>
+  <common-navbar [title]="recommendation.title"></common-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="form" (submit)="submitForm()">
+
+    <ion-input type="text" class="recommendation-title"
+               formControlName="title"></ion-input>
+
+    <ion-textarea class="recommendation-content"
+                  formControlName="content"></ion-textarea>
+
+    <ion-input type="text" class="recommendation-author"
+               formControlName="author"></ion-input>
+
+    <ion-spinner margin-bottom [hidden]="!isUpdating"></ion-spinner>
+    <button ion-button margin-bottom [hidden]="isUpdating">Update</button>
+  </form>
+  <div padding>
+    <rating></rating>
+  </div>
+</ion-content>

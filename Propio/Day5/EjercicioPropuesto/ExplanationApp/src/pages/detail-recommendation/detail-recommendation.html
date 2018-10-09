@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title><span>
+        {{ 'detailrecommendation.Title' | translate}}
+      </span></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="form" (submit)="formRecommendationDetailSubmitted()">
+    <ion-item>
+      <input type="text" formControlName="title">
+    </ion-item>
+
+    <ion-item>
+      <textarea rows="4" cols="50" formControlName="content"></textarea>
+    </ion-item>
+
+    <ion-item>
+      <input type="text" formControlName="author">
+    </ion-item>
+
+    <div padding>
+      <div text-center padding *ngIf="isLoading">
+        <ion-spinner></ion-spinner>
+      </div>
+      <div margin-top *ngIf="!isLoading">
+        <button ion-button>Actualizar</button>
+      </div>
+    </div>
+
+  </form>
+  <!--<h1>{{ recommendation.title }}</h1>
+  <p>{{ recommendation.content }}</p>
+  <p><i>{{ recommendation.author}}</i></p>-->
+  <div padding>
+    <rating></rating>
+  </div>
+</ion-content>

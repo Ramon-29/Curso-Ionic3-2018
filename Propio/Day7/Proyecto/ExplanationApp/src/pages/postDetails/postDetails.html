@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Post details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <h1>{{post.author}}</h1>
+  <p>{{post.timestamp | date: 'mediumDate'}}</p>
+  <p>{{post.content}}</p>
+
+  <h1>Comentarios</h1>
+
+  <div text-center padding *ngIf="isLoading">
+    <ion-spinner></ion-spinner>
+  </div>
+
+  <ion-card padding *ngFor="let message of messages" [hidden]="isLoading">
+    <p><i>{{message.author}} - {{message.timestamp | date: 'mediumDate'}}</i></p>
+    <p class="post-content">{{message.content}}</p>
+  </ion-card>
+</ion-content>
+<ion-footer [hidden]="isLoading">
+  <ion-toolbar>
+    <form [formGroup]="form" (submit)="addMessage()">
+      <ion-row>
+        <ion-col col-10>
+          <ion-textarea formControlName="content"></ion-textarea>
+        </ion-col>
+        <ion-col col-2>
+          <button ion-fab color="primary" [disabled]="isSubmitting">
+            <ion-icon name="ios-redo"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-toolbar>
+</ion-footer>

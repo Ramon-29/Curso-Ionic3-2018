@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div text-center padding *ngIf="isLoading">
+    <ion-spinner></ion-spinner>
+  </div>
+  <ion-list>
+    <button ion-item *ngFor="let fruit of fruits" (click)="itemTapped($event, fruit)">
+      <div>
+        {{fruit.name}}
+        <p>{{fruit.description | lettersToCut: 40}}</p>
+      </div>
+    </button>
+  </ion-list>
+  <div *ngIf="selectedItem" padding>
+    You navigated here from <b>{{selectedItem.title}}</b>
+  </div>
+</ion-content>
